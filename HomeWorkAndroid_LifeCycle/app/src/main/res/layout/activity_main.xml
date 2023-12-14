@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:onClick="onClick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Increment!"
+        android:id="@+id/btn_one"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:onClick="StartActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:id="@+id/btn_two"
+        android:layout_below="@id/btn_one"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:onClick="SettingActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Setting"
+        android:id="@+id/btn_three"
+        android:layout_below="@id/btn_two"
+        android:layout_centerInParent="true"
+        />
+    <Button
+        android:onClick="AboutActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_below="@id/btn_three"
+        android:layout_centerInParent="true"
+        />
+
+</RelativeLayout>
