@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Click me!"
+        android:layout_centerInParent="true"/>
+
+    <ToggleButton
+        android:id="@+id/two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOn="State On"
+        android:textOff="State Off"
+        android:layout_centerHorizontal="true"
+        android:checked="true"
+        android:layout_below="@id/one"/>
+
+    <Switch
+        android:id="@+id/three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/two"
+        android:layout_centerHorizontal="true"
+        android:text="switch"
+        android:checked="true"
+        android:layout_margin="20px"/>
+
+    <CheckBox
+        android:id="@+id/four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/three"
+        android:layout_centerHorizontal="true"
+        android:text="switch"
+        android:checked="true"
+        android:layout_margin="20px"/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/one"
+        android:layout_centerHorizontal="true">
+        <RadioButton
+            android:id="@+id/five"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:checked="true"
+            android:background="#2196F3"/>
+
+        <RadioButton
+            android:id="@+id/sixe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Woman"
+            android:background="#E91E63"/>
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/four"
+        android:entries="@array/cities"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/spinner_one"
+        android:src="@android:drawable/btn_star_big_on"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click me!"
+            android:layout_margin="10dp"
+            android:drawableLeft="@android:drawable/ic_delete"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click me!"
+            android:layout_margin="10dp"
+            android:drawableBottom="@android:drawable/ic_delete"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Click me!"
+            android:drawableRight="@android:drawable/ic_delete"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click me!"
+            android:layout_margin="10dp"
+            android:drawableTop="@android:drawable/ic_delete"/>
+    </LinearLayout>
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="text: 358979037vvv@gmail.com"
+        android:autoLink="email"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:clickable="true"
+        android:textColorLink="#CD1010"
+        android:textColor="@color/black"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+</RelativeLayout>

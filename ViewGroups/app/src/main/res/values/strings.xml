@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ViewGroups</string>
+    <string-array name="cities">
+        <item>Moscow</item>
+        <item>Baku</item>
+        <item>Paris</item>
+        <item>Minsk</item>
+    </string-array>
+</resources>
