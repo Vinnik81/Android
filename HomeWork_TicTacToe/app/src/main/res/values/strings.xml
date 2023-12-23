@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">HomeWork_TicTacToe</string>
+    <string name="winner_message">The player with the cross wins!!!</string>
+    <string name="pc_winner_message">The player with the null wins!!!</string>
+    <string name="winner_message_human">Congratulations. You won!!!</string>
+    <string name="newGame">NEW GAME</string>
+    <string name="draw_message">Draw</string>
+    <string name="RESET">Reset Human Vs Human</string>
+    <string name="RESET2">Reset Human Vs PC</string>
+</resources>
