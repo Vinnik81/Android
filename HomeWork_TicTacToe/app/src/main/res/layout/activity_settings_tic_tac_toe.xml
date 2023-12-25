@@ -57,4 +57,21 @@
         android:gravity="center"
         android:layout_below="@id/btnRestHumanVsHuman"/>
 
+    <Button
+        android:id="@+id/btnRestHumanVsPCHard"
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#FF0404"
+        android:text="@string/RESET3"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:gravity="center"
+        android:layout_below="@id/btnRestHumanVsPC"/>
+
 </RelativeLayout>

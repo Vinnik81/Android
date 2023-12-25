@@ -16,6 +16,8 @@ public class SettingsTicTacToe extends AppCompatActivity {
     ImageView backBtn;
     Button btnRestHumanVsHuman;
     Button btnRestHumanVsPC;
+
+    Button btnRestHumanVsPCHard;
     SharedPreferences sharedPreferences;
     SharedPreferences.Editor editor;
 
@@ -29,6 +31,7 @@ public class SettingsTicTacToe extends AppCompatActivity {
 
         btnRestHumanVsHuman = findViewById(R.id.btnRestHumanVsHuman);
         btnRestHumanVsPC = findViewById(R.id.btnRestHumanVsPC);
+        btnRestHumanVsPCHard = findViewById(R.id.btnRestHumanVsPCHard);
         backBtn = findViewById(R.id.backBtn);
 
         backBtn.setOnClickListener(new View.OnClickListener() {
@@ -53,6 +56,16 @@ public class SettingsTicTacToe extends AppCompatActivity {
             public void onClick(View view) {
                 editor.putInt("pointsHuman", 0);
                 editor.putInt("pointsPC", 0);
+                editor.apply();
+                Toast.makeText(SettingsTicTacToe.this, "Points are 0", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnRestHumanVsPCHard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                editor.putInt("pointsHumanHard", 0);
+                editor.putInt("pointsPCHard", 0);
                 editor.apply();
                 Toast.makeText(SettingsTicTacToe.this, "Points are 0", Toast.LENGTH_SHORT).show();
             }

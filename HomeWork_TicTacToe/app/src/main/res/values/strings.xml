@@ -7,4 +7,5 @@
     <string name="draw_message">Draw</string>
     <string name="RESET">Reset Human Vs Human</string>
     <string name="RESET2">Reset Human Vs PC</string>
+    <string name="RESET3">Reset Human Vs PC [Hard]</string>
 </resources>

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.HomeWork_TicTacToe"
         tools:targetApi="31">
         <activity
+            android:name=".HumanVsPC_Hard"
+            android:exported="false" />
+        <activity
             android:name=".HumanVsPC"
             android:exported="false" />
         <activity
