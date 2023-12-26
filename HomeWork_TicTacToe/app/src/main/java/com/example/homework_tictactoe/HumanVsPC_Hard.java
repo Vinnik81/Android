@@ -393,6 +393,38 @@ public class HumanVsPC_Hard extends AppCompatActivity {
             button7.setText(playerNol);
             isPCWin();
             return;
+        } else if (button1.getText() == "" && button2.getText() == playerKrest && button3.getText() == playerKrest) {
+            button1.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button4.getText() == "" && button5.getText() == playerKrest && button6.getText() == playerKrest) {
+            button4.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button7.getText() == "" && button8.getText() == playerKrest && button9.getText() == playerKrest) {
+            button7.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button1.getText() == "" && button4.getText() == playerKrest && button7.getText() == playerKrest) {
+            button1.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button2.getText() == "" && button5.getText() == playerKrest && button8.getText() == playerKrest) {
+            button2.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button3.getText() == "" && button6.getText() == playerKrest && button9.getText() == playerKrest) {
+            button3.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button1.getText() == "" && button5.getText() == playerKrest && button9.getText() == playerKrest) {
+            button1.setText(playerNol);
+            isPCWin();
+            return;
+        } else if (button3.getText() == "" && button5.getText() == playerKrest && button7.getText() == playerKrest) {
+            button3.setText(playerNol);
+            isPCWin();
+            return;
         }
 
         Random random = new Random();
