@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.one).setOnClickListener(view -> {
+        /*findViewById(R.id.one).setOnClickListener(view -> {
             Toast.makeText(this, "CLICK", Toast.LENGTH_LONG).show();;
         });
 
@@ -63,6 +63,6 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.imageButton).setOnClickListener(view -> {
             Toast.makeText(this, "CLICK", Toast.LENGTH_LONG).show();;
-        });
+        });*/
     }
 }

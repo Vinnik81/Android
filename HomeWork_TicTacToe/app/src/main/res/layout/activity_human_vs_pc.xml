@@ -10,7 +10,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="@drawable/vectorstock_28341945"/>
+        android:background="@drawable/cover1"/>
 
     <RelativeLayout
         android:id="@+id/menuBar"
