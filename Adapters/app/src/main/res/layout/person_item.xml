@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="20dp">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/img_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginRight="15dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/two"/>
+
+    <TextView
+        android:id="@+id/text_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="FullName"
+        android:layout_toRightOf="@id/img_avatar"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/text_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:layout_below="@id/text_fullname"
+        android:layout_toRightOf="@id/img_avatar"
+        android:textSize="20sp"/>
+    
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Know Java?"
+        android:layout_toRightOf="@id/img_avatar"
+        android:layout_below="@id/text_age"/>
+</RelativeLayout>
+</androidx.cardview.widget.CardView>
