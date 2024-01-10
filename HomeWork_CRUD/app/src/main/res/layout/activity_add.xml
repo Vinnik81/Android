@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:id="@+id/add_fullname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:hint="Enter Full Name"/>
+
+    <EditText
+        android:id="@+id/add_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_below="@id/add_fullname"
+        android:hint="Enter Age"/>
+
+    <EditText
+        android:id="@+id/add_phonenumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_below="@id/add_age"
+        android:hint="Enter Phone Number"/>
+
+    <EditText
+        android:id="@+id/add_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:layout_below="@id/add_phonenumber"
+        android:hint="Enter Email"/>
+
+    <EditText
+        android:id="@+id/add_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_below="@id/add_email"
+        android:hint="Enter Text"/>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textSize="30sp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
