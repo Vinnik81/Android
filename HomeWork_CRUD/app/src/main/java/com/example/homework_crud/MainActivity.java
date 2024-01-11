@@ -4,10 +4,13 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.homework_crud.adapters.PersonAdapter;
 import com.example.homework_crud.models.Person;
@@ -18,6 +21,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     static final int ADD_REQUEST_CODE = 1;
+    static final int EDIT_REQUEST_CODE = 2;
 
     List<Person>  people = new ArrayList<>();
     PersonAdapter personAdapter;
@@ -61,6 +65,14 @@ public class MainActivity extends AppCompatActivity {
         personAdapter = new PersonAdapter(this, people, R.layout.person_item);
         listView.setAdapter(personAdapter);
 
+        listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                listView.setItemChecked(position, true);
+            }
+        });
+
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -69,11 +81,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        editBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, EditActivity.class);
+                startActivityForResult(intent, EDIT_REQUEST_CODE);
+            }
+        });
+
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (people != null && people.size() > 0) {
                     people.clear();
+                    personAdapter.notifyDataSetChanged();
+                }
+            }
+        });
+
+        removeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int selectedPosition = listView.getCheckedItemPosition();
+                if (selectedPosition != ListView.INVALID_POSITION && people.size() > selectedPosition) {
+                    Person person = people.get(selectedPosition);
+                    people.remove(selectedPosition);
+                    Toast.makeText(MainActivity.this, "Deleted "+ person.getFullName(), Toast.LENGTH_LONG).show();
                     personAdapter.notifyDataSetChanged();
                 }
             }

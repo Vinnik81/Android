@@ -1,11 +1,13 @@
 package com.example.homework_crud.adapters;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.homework_crud.R;
@@ -61,6 +63,13 @@ public class PersonAdapter extends BaseAdapter {
         email.setText(person.getEmail());
         text.setText(person.getText());
         avatar.setImageResource(person.getImageId());
+
+        if (position == ((ListView) viewGroup).getCheckedItemPosition()) {
+            rowView.setBackgroundColor(Color.RED);
+        } else {
+            rowView.setBackgroundColor(Color.TRANSPARENT);
+        }
+
         return rowView;
     }
 }
