@@ -17,3 +17,6 @@
 2) Режим Человек - Компьютер
 3) Режим Человек - Компьютер (HARD где сложно победить,
    компьютер не просто делает шаги, но и анализирует ходы)
+
+# [3) HomeWork_CRUD](https://github.com/Vinnik81/Android/tree/master/HomeWork_CRUD)
+Создать CRUD operation над Классом (а не стринг)

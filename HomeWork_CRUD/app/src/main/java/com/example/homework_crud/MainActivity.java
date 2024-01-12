@@ -40,6 +40,17 @@ public class MainActivity extends AppCompatActivity {
              people.add(new Person(fullName, age, phoneNumber, email, text, R.drawable.two));
              personAdapter.notifyDataSetChanged();
           }
+
+          if (requestCode == EDIT_REQUEST_CODE) {
+              String fullName = data.getStringExtra("fullName");
+              int age = data.getIntExtra("age", 0);
+              String phoneNumber = data.getStringExtra("phoneNumber");
+              String email = data.getStringExtra("email");
+              String text = data.getStringExtra("text");
+              int position = data.getIntExtra("position", 0);
+              people.set(position, new Person(fullName, age, phoneNumber, email, text, R.drawable.two));
+              personAdapter.notifyDataSetChanged();
+          }
       }
     }
 
@@ -84,8 +95,20 @@ public class MainActivity extends AppCompatActivity {
         editBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, EditActivity.class);
-                startActivityForResult(intent, EDIT_REQUEST_CODE);
+                int selectedPosition = listView.getCheckedItemPosition();
+                if (selectedPosition != ListView.INVALID_POSITION && people.size() > selectedPosition) {
+                    Person person = people.get(selectedPosition);
+                    Intent intent = new Intent(MainActivity.this, EditActivity.class);
+                    intent.putExtra("fullName", person.getFullName());
+                    intent.putExtra("age", person.getAge());
+                    intent.putExtra("phoneNumber", person.getPhoneNumber());
+                    intent.putExtra("email", person.getEmail());
+                    intent.putExtra("text", person.getText());
+                    intent.putExtra("position", selectedPosition);
+                    startActivityForResult(intent, EDIT_REQUEST_CODE);
+                }
+                /*Intent intent = new Intent(MainActivity.this, EditActivity.class);
+                startActivityForResult(intent, EDIT_REQUEST_CODE);*/
             }
         });
 

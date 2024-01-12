@@ -24,7 +24,7 @@ public class EditActivity extends AppCompatActivity {
             String email = extras.getString("email");
             String text = extras.getString("text");
 
-            TextView editFullName = findViewById(R.id.edit_fullname_tv);
+            EditText editFullName = findViewById(R.id.edit_fullname);
             EditText editAge = findViewById(R.id.edit_age);
             EditText editPhoneNumber = findViewById(R.id.edit_phonenumber);
             EditText editEmail = findViewById(R.id.edit_email);
