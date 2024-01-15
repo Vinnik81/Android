@@ -1,6 +1,11 @@
 package com.example.homework_crud.models;
 
-public class Person {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import androidx.annotation.NonNull;
+
+public class Person implements Parcelable {
     public String fullName;
     public int age;
     public String phoneNumber;
@@ -65,5 +70,15 @@ public class Person {
 
     public void setImageId(int imageId) {
         this.imageId = imageId;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(@NonNull Parcel dest, int flags) {
+
     }
 }

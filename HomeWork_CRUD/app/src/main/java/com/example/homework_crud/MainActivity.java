@@ -1,11 +1,13 @@
 package com.example.homework_crud;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -52,6 +54,12 @@ public class MainActivity extends AppCompatActivity {
               personAdapter.notifyDataSetChanged();
           }
       }
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelableArrayList("people", (ArrayList<? extends Parcelable>) new ArrayList<>(people));
     }
 
     @Override
@@ -106,9 +114,11 @@ public class MainActivity extends AppCompatActivity {
                     intent.putExtra("text", person.getText());
                     intent.putExtra("position", selectedPosition);
                     startActivityForResult(intent, EDIT_REQUEST_CODE);
+                    Toast.makeText(MainActivity.this, "Edit" + selectedPosition, Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Please select an item to edit", Toast.LENGTH_LONG).show();
                 }
-                /*Intent intent = new Intent(MainActivity.this, EditActivity.class);
-                startActivityForResult(intent, EDIT_REQUEST_CODE);*/
+                
             }
         });
 
@@ -134,5 +144,14 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        if (savedInstanceState != null) {
+            ArrayList<Person> savedPeople = savedInstanceState.getParcelableArrayList("people");
+            if (savedPeople != null) {
+                people = savedPeople;
+                personAdapter = new PersonAdapter(this, people, R.layout.person_item);
+                listView.setAdapter(personAdapter);
+            }
+        }
     }
 }

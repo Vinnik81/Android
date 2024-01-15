@@ -59,7 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Text"
-            android:layout_below="@id/img_avatar"
+            android:layout_alignLeft="@id/img_avatar"
+            android:layout_below="@id/text_email"
             android:layout_marginTop="5dp"
             android:textSize="20sp"/>
 

@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 public class EditActivity extends AppCompatActivity {
+    private int position;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class EditActivity extends AppCompatActivity {
             String phoneNumber = extras.getString("phoneNumber");
             String email = extras.getString("email");
             String text = extras.getString("text");
+            position = extras.getInt("position");
 
             EditText editFullName = findViewById(R.id.edit_fullname);
             EditText editAge = findViewById(R.id.edit_age);
@@ -60,6 +63,7 @@ public class EditActivity extends AppCompatActivity {
                 intent.putExtra("phoneNumber", phoneNumber);
                 intent.putExtra("email", email);
                 intent.putExtra("text", text);
+                intent.putExtra("position", position);
                 setResult(200, intent);
                 finish();
             }
