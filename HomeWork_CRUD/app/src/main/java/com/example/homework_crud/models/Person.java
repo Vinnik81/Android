@@ -1,5 +1,6 @@
 package com.example.homework_crud.models;
 
+
 import android.os.Parcel;
 import android.os.Parcelable;
 
@@ -23,6 +24,28 @@ public class Person implements Parcelable {
         this.text = text;
         this.imageId = imageId;
     }
+
+
+    protected Person(Parcel in) {
+        fullName = in.readString();
+        age = in.readInt();
+        phoneNumber = in.readString();
+        email = in.readString();
+        text = in.readString();
+        imageId = in.readInt();
+    }
+
+    public static final Creator<Person> CREATOR = new Creator<Person>() {
+        @Override
+        public Person createFromParcel(Parcel in) {
+            return new Person(in);
+        }
+
+        @Override
+        public Person[] newArray(int size) {
+            return new Person[size];
+        }
+    };
 
     public String getFullName() {
         return fullName;
@@ -72,13 +95,16 @@ public class Person implements Parcelable {
         this.imageId = imageId;
     }
 
-    @Override
     public int describeContents() {
         return 0;
     }
 
-    @Override
     public void writeToParcel(@NonNull Parcel dest, int flags) {
-
+        dest.writeString(fullName);
+        dest.writeInt(age);
+        dest.writeString(phoneNumber);
+        dest.writeString(email);
+        dest.writeString(text);
+        dest.writeInt(imageId);
     }
 }
