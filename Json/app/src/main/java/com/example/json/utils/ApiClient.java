@@ -7,7 +7,7 @@ public class ApiClient {
 
     public static final String BASE_URL = "https://omdbapi.com/";
     //    https://omdbapi.com/?s=Spiderman&apikey=5b9b7798
-    public static final String API_KEY = "5b9b7798";
+    public static final String API_KEY = "521f208b";
     private static Retrofit retrofit = null;
 
     public static Retrofit getClient() {
