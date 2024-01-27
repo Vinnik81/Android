@@ -20,3 +20,6 @@
 
 # [3) HomeWork_CRUD](https://github.com/Vinnik81/Android/tree/master/HomeWork_CRUD)
 Создать CRUD operation над Классом (а не стринг)
+
+# [4) HomeWork_Json](https://github.com/Vinnik81/Android/tree/master/HomeWork_Json)
+Сделать запрос по api json
