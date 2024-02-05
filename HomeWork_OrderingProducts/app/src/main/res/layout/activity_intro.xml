@@ -223,19 +223,44 @@
 
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/cartBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:backgroundTint="#ff5e08"
             android:elevation="3dp"
             android:src="@drawable/shopping_cart"
+            android:tint="#ffffff"
             app:backgroundTint="#ff5e08"
-            android:layout_gravity="center"
-            app:maxImageSize="30dp"
-            android:tint="#ffffff">
+            app:maxImageSize="30dp">
 
         </com.google.android.material.floatingactionbutton.FloatingActionButton>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
-    
+
+    <LinearLayout
+        android:id="@+id/homeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/back" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textAlignment="center"
+            android:textColor="#676767"
+            android:textSize="12sp" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

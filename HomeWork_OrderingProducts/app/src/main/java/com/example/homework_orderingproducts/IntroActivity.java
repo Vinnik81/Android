@@ -8,11 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import com.example.homework_orderingproducts.adapter.CategoryAdapter;
 import com.example.homework_orderingproducts.adapter.FoodAdapter;
 import com.example.homework_orderingproducts.domain.CategoryDomain;
 import com.example.homework_orderingproducts.domain.FoodDomain;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -28,6 +30,26 @@ private RecyclerView recyclerViewCategoryList, recyclerViewFoodList;
 
         recyclerViewCategory();
         recyclerViewFood();
+        bottonNavigation();
+    }
+
+    private void bottonNavigation() {
+        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
+        LinearLayout homeBtn = findViewById(R.id.homeBtn);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(IntroActivity.this, CartListActivity.class));
+            }
+        });
+
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(IntroActivity.this, MainActivity.class));
+            }
+        });
     }
 
     private void recyclerViewCategory() {
