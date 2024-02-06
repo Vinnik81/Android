@@ -23,3 +23,10 @@
 
 # [4) HomeWork_Json](https://github.com/Vinnik81/Android/tree/master/HomeWork_Json)
 Сделать запрос по api json
+
+# [5) HomeWork_OrderingProducts](https://github.com/Vinnik81/Android/tree/master/HomeWork_OrderingProducts)
+Создать приложение для заказа (либо продуктов питания, либо фастфуда, либо других товаров).
+В приожении должно быть:
+а) главное окно;
+б) окно товаров или категорий товаров;
+в) окно детализации заказов.
